@@ -1,0 +1,373 @@
+*{
+	outline: none;
+}
+html, body{
+	height: 100%;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.center{
+	text-align: center;
+}
+
+.center-hv{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.title{
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-weight: 200;
+}
+
+.subtitle{
+	font-size: 1.3em;
+}
+
+/*navigation*/
+
+/*top*/
+nav.topBar{
+	margin: 0;
+	width: 100%;
+	height: auto;
+	background: #ffffff;
+	position: relative;	
+}
+
+nav.topBar h3{
+	margin: 0;
+	padding: 1em 0 0 1em;
+	position: relative;
+}
+
+nav.topBar h3 a{
+	text-decoration: none;
+	color: #666666;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+nav.topBar h3 strong{
+	display: block;
+	margin: 0;
+	padding: 0;
+	font-size: .7em;
+	padding-bottom: 1em;
+	font-weight: 200;
+
+}
+
+figure#boxlogo img{
+	width: 60px;
+}
+
+button#navBars{
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	font-size: 2em;
+	cursor: pointer;
+	background: #ffffff;
+	color: #65ca8b;
+	border: 1px solid transparent;
+
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+nav.topBar #menu{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	text-align: center;
+}
+
+nav.topBar #menu li{
+	display: block;
+	margin: -2px 0 -2px 0;
+	border-bottom: 2px solid transparent;
+}
+
+nav.topBar li:active, nav.topBar li.active{
+	border-bottom: 2px solid #65ca8b;
+}
+
+nav.topBar #menu a{
+	color: #666666;
+	display: block;
+	padding: 1em;
+	text-decoration: none;
+	border-bottom: 1px dotted #f7f7f7;
+	font-weight: 200;
+}
+
+nav.topBar #menu a:hover{
+	background: #04d38e;
+	color: #ffffff;
+}
+
+/*section home*/
+#home{
+	position: relative;
+	height: 100%;
+	background: #00CB89;
+}
+
+#home > div{
+	width: 90%;
+	z-index: 10;
+}
+
+h1{
+	color: #333333;
+	text-align: center;
+	font-size: 1.8em;
+	font-weight: 200;
+	padding: 0;
+	margin: 0;
+	line-height: 1em;
+}
+
+h1 strong{
+	display: block;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+h1 span{
+	font-size: .5em;
+}
+
+#home .social-links{
+	margin: 1em auto 0;
+	display: block;
+	text-align: center;
+}
+
+#home .social-links ul{
+	margin: 0;
+	padding: 0;
+}
+
+#home .social-links li{
+	display: inline-block;;
+	margin: 0 -2px 0 -2px;
+	vertical-align: bottom;
+}
+
+#home  figure{
+	margin: 2em auto;
+	text-align: center;
+	width: 100%;
+	
+}
+
+#home figure img{
+	width: 100%;
+	max-width: 200px;
+	padding: 0;
+	margin: 0;
+	border-radius: 400px;
+	box-shadow: 0 20px 0 rgba(256, 256, 256, .2), 0 -20px 0 rgba(256, 256, 256, .2), 20px 0 0 rgba(256, 256, 256, .2), -20px 0 0 rgba(256, 256, 256, .2);
+
+	animation: animateShadow 1s infinite alternate;
+}
+
+@keyframes animateShadow{
+	from{
+		box-shadow: 0 20px 0 rgba(256, 256, 256, .2), 0 -20px 0 rgba(256, 256, 256, .2), 20px 0 0 rgba(256, 256, 256, .2), -20px 0 0 rgba(256, 256, 256, .2);
+	}to{
+		box-shadow: 0 10px 0 rgba(256, 256, 256, .2), 0 -10px 0 rgba(256, 256, 256, .2), 10px 0 0 rgba(256, 256, 256, .2), -10px 0 0 rgba(256, 256, 256, .2);
+	}
+}
+
+#home .social-links a{
+	color: #049264;
+	padding: .5em;
+	position: relative;
+}
+
+#home .social-links a:before{
+	content: "";
+	position: absolute;
+	bottom: 120%;
+	left: 50%;
+	background: #049264;
+	color: #ffffff;
+	text-align: center;
+	padding: 1em;
+	font-size: .6em;
+	opacity: 0;
+	visibility: 0;
+	border-radius: 1px;
+	-webkit-transition: .5s ease;
+	-moz-transition: .5s ease;
+	-o-transition: .5s ease;
+	transition: .5s ease;
+
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+#home .social-links a:before:after{
+	content: "";
+	height: 20px;
+	width: 100%;
+	background: blue;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+#home .social-links a.facebook:before{
+	content: "facebook";
+}
+
+#home .social-links a.twitter:before{
+	content: "twitter";
+}
+
+#home .social-links a.linkedin:before{
+	content: "linkedin";
+}
+
+#home .social-links a.instagram:before{
+	content: "instagram";
+}
+
+#home .social-links a.dribbble:before{
+	content: "dribbble";
+}
+
+#home .social-links a.github:before{
+	content: "github";
+}
+
+#home .social-links a:hover:before{
+	bottom: 100%;
+	opacity: 1;
+	visibility: visible;
+}
+
+#home .social-links a:hover{
+	color: #333333;
+}
+
+@media (min-width: 480px){
+	h1{
+		font-size: 2.8em;
+	}
+}
+
+@media (min-width: 768px){
+	nav.topBar{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 999999;
+		/*background: transparent;*/
+	}
+
+
+	nav.topBar h3, nav.topBar #menu, nav.topBar #menu li{
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 -2px 0 -2px;
+		padding: 0;
+		position: relative;
+		border-bottom: 0;
+	}
+
+
+	nav.topBar h3{
+		width: 30%;
+		position: relative;
+		top: 10px;
+		left: 20px;
+	}
+
+	nav.topBar h3{
+		display: none;
+	}
+
+	/*nav.topBar-stick h3{
+		display: inline-block;
+	}*/
+
+	nav.topBar #menu a{
+		border-bottom: 0;
+		position: relative;
+		overflow: hidden;
+
+		-webkit-transition: padding .3s ease;
+		-o-transition: padding .3s ease;
+		transition: padding .3s ease;
+	}
+
+	nav.topBar #menu a:after{
+		content: "";
+		background: #03B97E;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		height: 10px;
+
+		-webkit-transition: .3s ease;
+		-o-transition: .3s ease;
+		transition: .3s ease;
+	}
+	
+
+	nav.topBar #menu a:hover{
+		padding-top: .7em;
+		padding-bottom: 1.3em;
+		background: none;
+		color: #666666;
+		box-shadow: -1px 0 0 #f7f7f7 inset, 1px 0 0 #f7f7f7 inset;
+	}
+
+	nav.topBar #menu a:hover:after{
+		top: 90%;
+	}
+
+	nav.topBar #menu{
+		width: 70%;
+		text-align: left;
+	}
+
+	/*nav.topBar-stick #menu{
+		text-align: right;
+	}*/
+
+	h1{
+		font-size: 3.8em
+	}
+
+	#navBars{
+		display: none;
+	}
+}
