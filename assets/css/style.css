@@ -39,12 +39,26 @@ body{
 /*navigation*/
 
 /*top*/
-nav.topBar{
+.topBar{
 	margin: 0;
 	width: 100%;
 	height: auto;
 	background: #ffffff;
-	position: relative;	
+	position: fixed;
+	top: -100px;	
+	left: 0;
+	z-index: 999999;
+	box-shadow: 0 1px 2px #eee;
+	opacity: 0;
+
+	-webkit-transition: .5s ease;
+	-moz-transition: .5s ease;
+	-o-transition: .5s ease;
+	transition: .5s ease;
+}
+
+nav.topbar-visible{
+	position: fixed !important;
 }
 
 nav.topBar h3{
@@ -275,6 +289,11 @@ h1 span{
 	color: #333333;
 }
 
+p{
+	padding: 1em;
+	margin: 1em 0;
+}
+
 @media (min-width: 480px){
 	h1{
 		font-size: 2.8em;
@@ -282,14 +301,7 @@ h1 span{
 }
 
 @media (min-width: 768px){
-	nav.topBar{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		z-index: 999999;
-		/*background: transparent;*/
-	}
+	
 
 
 	nav.topBar h3, nav.topBar #menu, nav.topBar #menu li{
@@ -312,10 +324,6 @@ h1 span{
 	nav.topBar h3{
 		display: none;
 	}
-
-	/*nav.topBar-stick h3{
-		display: inline-block;
-	}*/
 
 	nav.topBar #menu a{
 		border-bottom: 0;
@@ -358,10 +366,6 @@ h1 span{
 		width: 70%;
 		text-align: left;
 	}
-
-	/*nav.topBar-stick #menu{
-		text-align: right;
-	}*/
 
 	h1{
 		font-size: 3.8em

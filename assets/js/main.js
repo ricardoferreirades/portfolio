@@ -11,7 +11,7 @@ $(document).ready(function(){
 	    $target = $(target);
 
 	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top - 0
+	        'scrollTop': $target.offset().top - 55
 	    }, 900, 'swing');
 	});
 
@@ -23,15 +23,36 @@ $(document).ready(function(){
 		});
 	});
 
-	// Hiding the menu when the page loads
-	$("#menu").hide();
+	// hiding the menu if the window width is less than 768px
+	function hideMenu(){
+		if ($(window).width() < 768) {
+			$("#menu").hide();
+			$(".menu-item").click(function(){
+				$("#menu").hide();
+			});
+		}else{
+			$("#menu").show();
+		}
+	}
 
-	// showing the menu when the window changes
+	hideMenu();
+
 	$(window).resize(function(){
-	    if($(window).width() > 767){
-	      $("#menu").show();
-	    }else{
-	      $("#menu").hide();
-	    }
+		hideMenu();	
 	});
+
+
+	
+	// showing menu
+	$(window).on("scroll", function(){
+
+		if($("body").scrollTop() > $(window).height()){
+			$(".topBar").css({"top":"0", "opacity":"1"});
+		}else{
+			$(".topBar").css({'top':'-100px','opacity':'0'});
+		}
+
+	});
+	
+
 });
