@@ -18,7 +18,7 @@ $(document).ready(function(){
 	// collapseble menu
 	$("#navBars").click(function(){
 		$(this).prop("disabled", true);
-		$("#menu").slideToggle(1000, function(){
+		$("#menu").slideToggle(500, function(){
 			$("#navBars").prop("disabled", false);
 		});
 	});
@@ -28,7 +28,7 @@ $(document).ready(function(){
 		if ($(window).width() < 768) {
 			$("#menu").hide();
 			$(".menu-item").click(function(){
-				$("#menu").hide();
+				$("#menu").slideUp();
 			});
 		}else{
 			$("#menu").show();
@@ -41,17 +41,13 @@ $(document).ready(function(){
 		hideMenu();	
 	});
 
-
-	
 	// showing menu
 	$(window).on("scroll", function(){
-
 		if($("body").scrollTop() > $(window).height()){
 			$(".topBar").css({"top":"0", "opacity":"1"});
 		}else{
 			$(".topBar").css({'top':'-100px','opacity':'0'});
 		}
-
 	});
 	
 
