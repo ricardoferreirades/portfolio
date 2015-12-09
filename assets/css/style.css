@@ -28,6 +28,10 @@ section{
 	color: #999;
 }
 
+.bg-gray{
+	background: #f7f7f7;
+}
+
 .center{
 	text-align: center;
 }
@@ -66,6 +70,15 @@ section{
 .button-out-green{
 	border: 1px solid #6cd794;
 	color: #6cd794;
+}
+
+.text-content{
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.section{
+	padding: 3em 0
 }
 
 /*navigation*/
