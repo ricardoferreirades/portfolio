@@ -324,6 +324,10 @@ h1 span{
 	content: "github";
 }
 
+#home .social-links a.behance:before{
+	content: "behance";
+}
+
 #home .social-links a:hover:before{
 	bottom: 100%;
 	opacity: 1;
@@ -366,10 +370,6 @@ p{
 		left: 20px;
 	}
 
-	nav.topBar h3{
-		display: none;
-	}
-
 	nav.topBar #menu a{
 		border-bottom: 0;
 		position: relative;
@@ -409,7 +409,7 @@ p{
 
 	nav.topBar #menu{
 		width: 70%;
-		text-align: left;
+		text-align: right;
 	}
 
 	h1{
