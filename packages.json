@@ -1,0 +1,14 @@
+{
+  "name": "aprendendo",
+  "version": "1.0.0",
+  "description": "Aprendendo Gulp",
+  "author": "Seu nome<seu@email.com.br>",
+  "devDependencies": {
+ "gulp": "*",
+ "gulp-uglify":"*",
+ "gulp-cssmin":"*",
+ "gulp-strip-css-comments":"*",
+ "gulp-watch":"*",
+ "gulp-concat" : "*"
+  }
+}
