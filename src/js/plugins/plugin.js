@@ -1,1 +1,0 @@
-console.log("eu sou um plugin");
